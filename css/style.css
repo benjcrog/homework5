@@ -1,0 +1,316 @@
+body{
+  font-family: 'Raleway', sans-serif; /* Test for this*/
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; /* test for this! Make all sizes em or rem */
+  background-image: url('../images/concrete_seamless.png');
+}
+
+h1{
+  font-size: 2em;
+  text-align: center;
+  line-height: 2;
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px;
+}
+
+p {
+  padding: 0 30px;
+}
+.skip a{
+  
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  margin-top: -40px;
+
+
+  /*Your code here - position relative to the parent */
+  /*Your code here - place 40px higher */;
+}
+a.skip{
+  visibility: hidden;
+}
+.skip a:focus{
+  margin-top: 0px;
+
+}
+
+
+
+
+
+/*    a:focus{
+
+        border: 2px solid black;
+        border-color: #000000;
+    }
+    margin: 40px;
+    -webkit-transition: none;
+    transition: none;
+  }
+*/
+
+
+a.skip:focus{
+  margin-top: 0px;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/*
+Keyframes for animation*/
+
+@-webkit-keyframes logo_wiggle{
+  from{
+    width:25px;
+  }
+  to{
+    width:420px;
+  }
+
+
+}
+
+@keyframes logo_wiggle{
+  from{
+    width:25px;
+  }
+  to{
+    width:420px;
+  }
+
+} 
+
+#logo{
+  animation: logo_wiggle 3s;
+  animation-iteration-count: 1;
+}
+
+/* Cards! */
+.pricing{
+    min-height: 500px;
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+  /*  align-self: flex-end;*/
+    align-items: center;
+    -webkit-transform: scaleX(1.12);
+     transform: scaleX(1.12);
+  
+}
+
+.card {
+  align-items: center;
+  flex-basis: 400px;
+  /*flex: 0 0 400px;*/
+  margin: 1em;
+  
+  
+  background: #fff;
+  border-radius: 7px;
+  padding: 0 0 50px 0;
+}
+
+.card > header{
+  background: #288080;
+  border: 2px solid #45ADAD;
+/*  justify-content: center;
+  align-items: horizontal;*/
+  padding: 20px 0;
+  border-radius: 7px 7px 0 0;
+  /*align-content: center;*/
+}
+
+.card > ul{
+  list-style: none;
+  padding: 0;
+}
+
+.card > ul li {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.card button{
+  width: 90%;
+  height: 40px;
+  border: 0;
+  margin-left: 12px;
+  border-radius: 7px;
+  background: #288080;
+  color: white;
+  font-size: 1em;
+}
+
+.card h3{
+  font-size: 4em;
+  color: white;
+  text-align: center;
+}
+
+.card_big{
+  -webkit-transform: initial;
+          transform: initial;
+}
+
+/* Gallery! */
+
+.gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 600px;
+  width: 300;
+  /*flex-shrink: 1;*/
+}
+
+.gallery > img{
+  border: 10px #50C7C7 solid;
+  flex: 0 0 600px;
+  margin: 10px;
+  width: 300px;
+}
+
+/* Navbar */
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*flex-flow: row wrap;*/
+  justify-content: space-around;
+ 
+  
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+}
+
+.nav_links{
+ 
+  list-style: none;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav_item a:hover, a:focus{
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+@media screen and (min-width: 850px){
+
+  /* Cards! */
+  .card {
+
+    flex: 0 0 250px;
+    justify-content: center;
+    align-items: baseline;
+
+
+    
+  }
+
+  .card_big{
+    -webkit-transform: scaleX(1.12);
+            transform: scaleX(1.12);
+  }
+
+  /* Navbar */
+
+  header{
+/*    display: flex;*/
+    justify-content: space-between;
+    flex-direction: row;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+
+    
+  }
+
+  .nav_links{
+    display: flex;
+
+    
+  }
+
+  .nav_item a{
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+}
+
+@media print { 
+
+  /*Pricing class and pricing id*/
+
+  
+  .pricing {
+    display: flex
+    justify-content:center;
+    flex-direction: row;
+    flex: 0 0 250px;
+    /*flex-basis: 250px;*/
+    align-items: flex-start;
+    list-style: none;
+    -webkit-transform: scaleX(1.12);
+     transform: scaleX(1.12);
+  }
+  .gallery {
+    display: none;
+  }
+  #gallery{
+    display: none;
+  }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+    }
+
+  .skip a{
+    visibility: hidden;
+    position: absolute;
+  a:focus{
+
+        border: 2px solid black;
+        border-color: #000000;
+    }
+    margin: 40px;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
