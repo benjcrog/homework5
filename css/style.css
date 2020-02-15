@@ -36,9 +36,7 @@ p {
   /*Your code here - position relative to the parent */
   /*Your code here - place 40px higher */;
 }
-a.skip{
-  visibility: hidden;
-}
+
 .skip a:focus{
   margin-top: 0px;
 
